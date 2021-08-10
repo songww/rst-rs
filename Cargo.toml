@@ -1,0 +1,26 @@
+[package]
+name = "rst-rs"
+version = "0.1.0"
+edition = "2018"
+authors = ["songww <sww4718168@163.com>"]
+documentation = "https://docs.rs/rst-rs"
+description = "A reStructuredText parser and render."
+homepage = "https://github.com/songww/rst-rs"
+readme = "README.md"
+license = "MIT OR Apache-2.0"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+[lib]
+name = "rst"
+
+[dependencies]
+rst-entities = { path = "./entities", version = "0.1.0-alpha0" }
+rst-renders = { path = "./renders", version = "0.1.0-alpha0" }
+rst-parser = { path = "./parser", version = "0.1.0-alpha0" }
+
+[workspace]
+members = [
+    "rst-parser",
+    "rst-renders",
+    "rst-entities",
+]
